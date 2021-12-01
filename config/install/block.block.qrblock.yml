@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - jugaad_patch
+    - node
+  theme:
+    - bartik
+id: qrblock
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: qr_block
+settings:
+  id: qr_block
+  label: 'Qr Block'
+  label_display: visible
+  provider: jugaad_patch
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      product: product

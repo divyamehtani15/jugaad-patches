@@ -1,0 +1,12 @@
+{   
+    "name": "drupal/jugaad_patch",
+    "description": "Custom module that helps to add product content type and custom block for QR code.",
+    "type": "drupal-module",
+    "require": {
+        "aferrandini/phpqrcode": "^1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "drupal/coder": "^8.3.10"
+    }
+}
