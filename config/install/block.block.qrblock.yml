@@ -18,10 +18,10 @@ settings:
   label_display: visible
   provider: jugaad_patch
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
+  node_type:
+    id: node_type
+    bundles:
+      product: product
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-    bundles:
-      product: product
