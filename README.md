@@ -10,7 +10,8 @@ CONTENTS OF THIS FILE
 
  INTRODUCTION
  ------------
-  - Custom module that helps to add product content type and custom block for QR code in right sidebar.
+  - Custom module that helps to add product content type and
+    custom block for QR code in right sidebar.
     By Scanner the QR code you would redirect to the App Purchase Link.
 
 

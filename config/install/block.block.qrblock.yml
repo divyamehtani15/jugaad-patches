@@ -15,7 +15,7 @@ plugin: qr_block
 settings:
   id: qr_block
   label: 'Qr Block'
-  label_display: visible
+  label_display: '0'
   provider: jugaad_patch
 visibility:
   node_type:

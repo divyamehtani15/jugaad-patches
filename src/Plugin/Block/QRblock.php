@@ -10,6 +10,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Psr\Log\LoggerInterface;
+use Drupal\Core\Render\Markup;
 
 /**
  * Provides a 'qrblock' block.
@@ -102,13 +103,13 @@ class QRblock extends BlockBase implements ContainerFactoryPluginInterface {
         $nid = $node->id();
         $applink = $node->get('field_purchase_link')->getValue()[0]['uri'];
         $qrcode = $this->generateQrCodes($nid, $applink);
-        $html = '<img src="' . $base_url . $qrcode . '" >';
+        $html = '<img src="' . $base_url . $qrcode . '" style="display:block; margin: 0 auto; width: 70%">';
         return [
           '#type' => 'markup',
-          '#markup' => $html,
+          '#markup' => Markup::create($html),
           '#cache' => [
             'max-age' => 0,
-          ],
+          ]
         ];
       }
     }

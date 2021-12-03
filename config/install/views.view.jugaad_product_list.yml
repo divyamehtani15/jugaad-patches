@@ -25,7 +25,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Product List'
+      title: ''
       fields:
         title:
           id: title
@@ -307,7 +307,20 @@ display:
       cache:
         type: none
         options: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: '<h2>No Products Available</h2>'
+            format: full_html
+          tokenize: false
       sorts:
         created:
           id: created
