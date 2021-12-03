@@ -8,7 +8,6 @@ dependencies:
     - node.type.product
   module:
     - image
-    - link
     - text
     - user
 id: node.product.default
@@ -21,32 +20,21 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_image:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: 102
-    region: content
-  field_purchase_link:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 103
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_purchase_link: true

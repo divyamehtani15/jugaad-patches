@@ -90,6 +90,8 @@ class QRblock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * {@inheritdoc}
+   *
+   * Return purchase link as QR code Image.
    */
   public function build() {
     global $base_url;
@@ -113,7 +115,7 @@ class QRblock extends BlockBase implements ContainerFactoryPluginInterface {
   }
 
   /**
-   * Generate QR code.
+   * Generate QR code and save the image in Pulic path.
    */
   public function generateQrCodes($nid, $applink) {
     // The below code will automatically create the path for the img.
