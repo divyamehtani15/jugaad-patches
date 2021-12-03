@@ -109,7 +109,7 @@ class QRblock extends BlockBase implements ContainerFactoryPluginInterface {
           '#markup' => Markup::create($html),
           '#cache' => [
             'max-age' => 0,
-          ]
+          ],
         ];
       }
     }

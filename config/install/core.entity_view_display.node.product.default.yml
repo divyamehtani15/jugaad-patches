@@ -5,7 +5,7 @@ dependencies:
     - field.field.node.product.body
     - field.field.node.product.field_image
     - field.field.node.product.field_purchase_link
-    - image.style.large
+    - image.style.medium
     - node.type.product
   module:
     - image
@@ -21,16 +21,16 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_image:
     type: image
     label: hidden
     settings:
       image_link: file
-      image_style: large
+      image_style: medium
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   links:
     settings: {  }

@@ -12,3 +12,13 @@ function jugaad_patch_install() {
   // Set homepage url.
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/product-list')->save();
 }
+
+/**
+ * Implements hook_uninstall().
+ */
+function jugaad_patch_uninstall() {
+  // Unset homepage url to default.
+  $current_user = \Drupal::currentUser();
+  $uid = $current_user->id();
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/user/' . $uid)->save();
+}
